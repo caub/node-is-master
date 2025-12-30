@@ -173,4 +173,4 @@ class Node extends EventEmitter {
 /**
  * Expose node
  */
-module.exports = new Node();
+module.exports = Node;
