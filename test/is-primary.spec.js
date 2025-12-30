@@ -4,7 +4,8 @@ const test = require("assert");
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 
-const node = require('../is-primary');
+const Primary = require('../is-primary');
+const node = new Primary();
 
 describe("is-primary", function () {
 

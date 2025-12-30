@@ -96,6 +96,27 @@ http://mattpker.com/2015/08/07/How-to-schedule-jobs-in-NodeJS/
 In lieu of a formal styleguide, take care to maintain the existing coding style.
 Add unit tests for any new or changed functionality. Lint and test your code.
 
+## Breaking change in v2.0.0
+
+The package now exports the `Node` constructor instead of a singleton instance.
+
+### Before (v1.x)
+
+```
+const primary = require('is-primary');
+primary.isPrimary(value);
+
+```
+
+### After (v2.x)
+
+```
+const Primary = require('is-primary');
+const primary = new Primary();
+primary.isPrimary(value);
+
+```
+
 ## Release History
 
 * 1.3.0 Deprecating slave terminolgy for secondary [#18](https://github.com/mattpker/node-is-master/pull/18), mongoose security update [#19](https://github.com/mattpker/node-is-master/pull/19), and fix for mongoose deprecation warnings [#17](https://github.com/mattpker/node-is-master/pull/17)
